@@ -33,6 +33,9 @@ Follow the url https://www.freecodecamp.org/news/how-to-install-python-in-window
 
 ![](https://i.imgur.com/SP1xNys.png)
 
+
+
+
 - Use custom installation
 
 ![](https://www.freecodecamp.org/news/content/images/2022/02/06.png)
@@ -343,3 +346,6 @@ create 3 urls also
 /students/edit  <--- /students/<int>/edit
 /students/delete <--- /students/<int>/delete
 ```
+# 
+
+![](https://imgur.com/M6vnjUw)
