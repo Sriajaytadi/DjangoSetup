@@ -308,3 +308,27 @@ testing (django-admin startproject testing)
   Compiled CSS and JS
 https://getbootstrap.com/docs/5.0/getting-started/download/
 
+Download the zip file
+
+and place bootstrap.min.css in static/css folder
+
+and place bootstrap.bundle.min.js in static/js folder
+
+And write this template
+
+```
+<html> 
+<head>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
+
+
+# CRUD
+
+![](https://i.imgur.com/7wTQFyP.png)
+
