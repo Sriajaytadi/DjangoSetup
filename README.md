@@ -346,6 +346,6 @@ create 3 urls also
 /students/edit  <--- /students/<int>/edit
 /students/delete <--- /students/<int>/delete
 ```
-# 
+# Views page
 
-![](https://imgur.com/M6vnjUw)
+![](https://imgur.com/M6vnjUw.png)
