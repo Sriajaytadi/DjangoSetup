@@ -351,4 +351,4 @@ create 3 urls also
 ![](https://imgur.com/M6vnjUw.png)
 
 # URLS page
-![]https://imgur.com/M4ijz5p.png
+![](https://imgur.com/M4ijz5p.png)
