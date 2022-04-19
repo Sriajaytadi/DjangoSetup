@@ -333,3 +333,13 @@ And write this template
 
 ![](https://i.imgur.com/7wTQFyP.png)
 
+# Task
+
+Create new app called students <-- inside this create templates, students.html, students_edit.html, students_delete.html
+
+create 3 urls also
+```
+/students
+/students/edit  <--- /students/<int>/edit
+/students/delete <--- /students/<int>/delete
+```
