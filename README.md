@@ -349,3 +349,6 @@ create 3 urls also
 # Views page
 
 ![](https://imgur.com/M6vnjUw.png)
+
+# URLS page
+![]https://imgur.com/M4ijz5p.png
