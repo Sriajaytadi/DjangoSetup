@@ -303,7 +303,8 @@ testing (django-admin startproject testing)
          |--css
          |--js
          |--images
-         
+```
+
 # Downloading and installing bootstrap
   Compiled CSS and JS
 https://getbootstrap.com/docs/5.0/getting-started/download/
