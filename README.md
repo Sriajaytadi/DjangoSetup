@@ -370,3 +370,42 @@ create 3 urls also
         </div>
         </form>
 ```
+
+
+# request Methods
+
+- GET (on Clicking Submit we see the url changes to) `http://127.0.0.1:8000/students/?fname=hare&lname=krishna`
+- POST (no change in url)
+
+
+- delete
+- put
+- patch
+
+
+# csrf token is required for forms
+
+```
+{% csrf_token %}
+
+converts to
+
+<input type="hidden" name="csrfmiddlewaretoken" value="zaSva7ec58bLJ3MyFrcJ8Sqz0uzbUNctJsRzA3XnnDPWgBdQ8XWxqxJCX5GC2qbx">
+```
+
+```
+        <form method="POST" class="row g-3" action="/students/">
+        {% csrf_token %}
+        <div class="col-md-6">
+          <label for="firstname" class="form-label">FirstName</label>
+          <input type="firstname" class="form-control" name="fname" id="firstname">
+        </div>
+        <div class="col-md-6"> 
+          <label for="lastname" class="form-label">LastName</label>
+          <input type="lastname" class="form-control" name="lname" id="lastname">
+        </div>
+        <div class="mb-3">
+          <input type="submit" class="btn btn-success" value="Add Student">
+        </div>
+        </form>
+```
