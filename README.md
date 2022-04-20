@@ -396,7 +396,7 @@ converts to
 1. We have added action in this form so that On submit, send the form-data to a file named students.
 2. We have added method="POST" in this form so that,for request method GET data is passed along with url. for request method POST data is passed inside body. In terms of security method type POST is better one.
 
-![](https://imgur.com/hvIQlcN)
+![](https://imgur.com/hvIQlcN.png)
 ```
         <form method="POST" class="row g-3" action="/students/">
         {% csrf_token %}
