@@ -352,3 +352,21 @@ create 3 urls also
 
 # URLS page
 ![](https://imgur.com/M4ijz5p.png)
+
+# Forms
+
+```
+        <form method="POST" class="row g-3" action="/students/">
+        <div class="col-md-6">
+          <label for="firstname" class="form-label">FirstName</label>
+          <input type="firstname" class="form-control" name="fname" id="firstname">
+        </div>
+        <div class="col-md-6"> 
+          <label for="lastname" class="form-label">LastName</label>
+          <input type="lastname" class="form-control" name="lname" id="lastname">
+        </div>
+        <div class="mb-3">
+          <input type="submit" class="btn btn-success" value="Add Student">
+        </div>
+        </form>
+```
