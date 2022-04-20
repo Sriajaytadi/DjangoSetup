@@ -455,3 +455,6 @@ class Person(models.Model):
 python manage.py makemigrations
 python manage.py migrate
 ```
+## Download SQl lite to access database
+
+Download link :https://sqlitebrowser.org/dl/
