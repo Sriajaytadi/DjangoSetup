@@ -409,3 +409,45 @@ converts to
         </div>
         </form>
 ```
+
+# django check wether request is get or post
+
+```
+if request.method == 'GET':
+    do_something()
+elif request.method == 'POST':
+    do_something_else()
+```
+
+
+# getting name
+
+```
+from django.http import HttpResponse
+import json
+# create a function
+def students_view(request):
+    if request.method == 'GET':
+        return render(request, "crud/students.html")
+    elif request.method == 'POST':
+        fname = request.POST['fname']
+        lname = request.POST['lname']
+        #return render(request, "crud/students_old.html")
+        return HttpResponse(json.dumps({"fname":f"{fname}_000","lname":f"{lname}_000"}), content_type='application/json')
+```
+
+# creating database tables
+## models
+
+```
+from django.db import models
+
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+```
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
