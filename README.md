@@ -498,3 +498,13 @@ from django.shortcuts import render, redirect
       
  return redirect('/students')
 ```
+# django order by
+```
+def students_view(request):
+    if request.method == 'GET':
+       ** persons = Person.objects.all().order_by('-id')**
+        person2 = [
+            {"fname": persons[0].first_name,"lname":persons[0].last_name},
+            {"fname": persons[1].first_name,"lname":persons[1].last_name},
+        ]
+```
