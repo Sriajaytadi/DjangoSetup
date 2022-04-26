@@ -458,3 +458,33 @@ python manage.py migrate
 ## Download SQl lite to access database
 
 Download link :https://sqlitebrowser.org/dl/
+
+
+# Basic python related
+
+```
+## TYPE1: dictionaries (key style, keys are visible to eyes)
+
+students = [
+    {"fname":"sant","lname":"kum"},
+    {"fname":"ajay","lname":"sum"}
+]
+
+students[0]{"fname"}
+
+## OOP style (dot sytle - we have to know the keys from the class)
+
+class student():
+    def __init__(fname,lname):
+        self.fname=fname
+        self.lname=lname
+
+from models import student
+
+students =[ 
+    student("sant","kum"),
+    student("ajay","jun")
+]
+
+students[0].fname
+```
