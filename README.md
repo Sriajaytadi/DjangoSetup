@@ -490,11 +490,11 @@ students[0].fname
 ```
 
 # Render and Redirect Functions in Django
-'''
+```
 
 from django.shortcuts import render, redirect
 
  return render(request, "crud/students.html",context)
       
  return redirect('/students')
-'''
+```
