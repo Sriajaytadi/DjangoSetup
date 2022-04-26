@@ -508,7 +508,7 @@ def students_view(request):
             {"fname": persons[1].first_name,"lname":persons[1].last_name},
         ]
 ```
-# Django table entry and for loop Counter
+# Django table entry and for-loop Counter
 ```
  {% for person in persons %}
                 <tr>
