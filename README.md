@@ -521,6 +521,7 @@ def students_view(request):
    ```      
    
  ## Make changes to database
+  ```
   python manage.py makemigrations
   
   python manage.py migrate
