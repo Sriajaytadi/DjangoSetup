@@ -518,4 +518,11 @@ def students_view(request):
                   <td>{{person.user_id}}</td>
                 </tr>
                 
-   ```             
+   ```      
+   
+ ## Make changes to database
+  python manage.py makemigrations
+  
+  python manage.py migrate
+  
+   ```
