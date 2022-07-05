@@ -1,0 +1,79 @@
+'''
+
+import requests
+import json
+
+url = "https://dev-27570357-admin.okta.com//api/v1/groups"
+
+payload = {}
+headers = {
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization' : 'SSWS 00rX0FHIYNcytlAylAocUZHpFIwYqprKdWv9KMEJO9',
+    'Cookie' : 'JSESSIONID=5826C723CC68C68CC0486BF5E237B44D'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+# string convert to python object
+python_object = json.loads(response.text)
+
+#len = len(python_object)
+# pretty print python object
+# print(json.dumps(python_object,default=str,indent=4))
+
+
+group_ids = []
+
+for i in range(0, len(python_object)) :
+    group_ids.append(python_object[i]["id"])
+
+print(group_ids)
+
+# To get the list for De-provisioned users
+
+url = "https://dev-27570357-admin.okta.com//api/v1/users?filter=status eq \"DEPROVISIONED\"&limit=25"
+
+payload = {}
+headers = {
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization' : 'SSWS 00rX0FHIYNcytlAylAocUZHpFIwYqprKdWv9KMEJO9'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(type(response.text))  # response text is a string
+
+# string convert to python object
+python_object = json.loads(response.text)
+
+# pretty print python object
+# print(json.dumps(python_object,default=str,indent=4))
+
+outputs = []
+for i in range(0, len(python_object)) :
+    user_id = python_object[i]["id"]
+    statuses = []
+    for j in range(0, len(group_ids)) :
+        group_id = group_ids[j]
+
+        url = f"https://dev-27570357-admin.okta.com/api/v1/groups/{group_id}/users/{user_id}"
+        print(url)
+
+        payload = ""
+        headers = {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json',
+            'Authorization' : 'SSWS 00rX0FHIYNcytlAylAocUZHpFIwYqprKdWv9KMEJO9'
+        }
+
+        response = requests.request("DELETE", url, headers=headers, data=payload)
+
+        status_code = response.__dict__["status_code"]
+        statuses.append({"groupId" : group_id, "status" : status_code})
+
+    outputs.append({"userId" : user_id, "statuses" : statuses})
+print(json.dumps(outputs, indent=4, default=str))
+
+'''
